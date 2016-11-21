@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package>
+  <metadata>
+    <id>Origami.Powershell.Continuous</id>
+    <version>0.0.1</version>
+    <authors>Bartłomiej Dubas</authors>
+    <owners>Bartłomiej Dubas</owners>
+
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/origami-network/PowerShell.Continuous</projectUrl>
+    <!--<iconUrl></iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <description>
+       Provide bootstrap script to help execute continouus actions.
+       It simplify usage of manifest PowerShell modules reaferenced through packages.config.
+    </description>
+    <copyright>Copyright origami.network 2016</copyright>
+
+    <tags>origami powershell invoke continuous</tags>
+  </metadata>
+
+  <files>
+    <file src="content\*" target="content" />
+    <file src="tools\*" target="tools" />
+    <file src="..\Invoke-Continuous.ps1" target="tools" />
+  </files>
+</package>

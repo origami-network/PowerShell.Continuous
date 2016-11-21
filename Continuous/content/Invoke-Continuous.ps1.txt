@@ -1,0 +1,2 @@
+﻿This file is just to allow reference package to the project.
+It will be removed during install and replaced with link to script.
