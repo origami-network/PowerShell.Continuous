@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <package>
   <metadata>
-    <id>Origami.Powershell.Continuous</id>
+    <id>Origami.PowerShell.Continuous</id>
     <version>0.0.1</version>
     <authors>Bartłomiej Dubas</authors>
     <owners>Bartłomiej Dubas</owners>
