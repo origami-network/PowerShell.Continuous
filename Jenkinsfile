@@ -10,6 +10,7 @@ stage ("Build") {
            submoduleCfg: [],
            userRemoteConfigs: [[url: 'https://github.com/origami-network/PowerShell.Continuous.git']]
         ])
+		currentBuild.displayName = "#" + (currentBuild.number + "-test")
         bat 'powershell .\\Invoke-Continuous.ps1 Integration -ExitOnError'
         bat 'set'
         stash includes: '.artifacts/Packages/**', name: 'packages'
