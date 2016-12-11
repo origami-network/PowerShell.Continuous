@@ -46,6 +46,9 @@
     <None Include="..\Invoke-Continuous.ps1">
       <Link>tools\Invoke-Continuous.ps1</Link>
     </None>
+    <None Include="..\Jenkinsfile">
+      <Link>Jenkinsfile</Link>
+    </None>
     <None Include="Integration.action.ps1" />
   </ItemGroup>
   <ItemGroup>
