@@ -50,6 +50,7 @@
       <Link>Jenkinsfile</Link>
     </None>
     <None Include="Integration.action.ps1" />
+    <Content Include="tests\Invoke-Continuous.Test.ps1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Origami.PowerShell.Continuous.nuspec">
@@ -61,9 +62,7 @@
     <Content Include="tools\install.ps1" />
     <Content Include="tools\uninstall.ps1" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
