@@ -43,26 +43,28 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Invoke-Continuous.ps1">
+    <Content Include="..\Invoke-Continuous.ps1">
       <Link>tools\Invoke-Continuous.ps1</Link>
-    </None>
+    </Content>
     <None Include="..\Jenkinsfile">
       <Link>Jenkinsfile</Link>
     </None>
-    <None Include="Integration.action.ps1" />
-    <Content Include="tests\Invoke-Continuous.Test.ps1" />
+    <Content Include="Integration.action.ps1" />
+    <Content Include="tests\Invoke-Continuous.Tests.ps1" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Origami.PowerShell.Continuous.nuspec">
+    <Content Include="Origami.PowerShell.Continuous.nuspec">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="packages.config" />
+    </Content>
+    <Content Include="packages.config" />
     <Content Include="content\Invoke-Continuous.ps1.txt" />
     <Content Include="tools\init.ps1" />
     <Content Include="tools\install.ps1" />
     <Content Include="tools\uninstall.ps1" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
