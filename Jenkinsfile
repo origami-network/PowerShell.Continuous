@@ -10,15 +10,20 @@ stage ("Build") {
            submoduleCfg: [],
            userRemoteConfigs: [[url: 'https://github.com/origami-network/PowerShell.Continuous.git']]
         ])
-        bat 'powershell .\\Invoke-Continuous.ps1 Integration -ExitOnError'
-		step([
-			$class: 'NUnitPublisher',
-			testResultsPattern: '.artifacts/Reports/**/*.NUnit.xml',
-			debug: false,
-			keepJUnitReports: false,
-			skipJUnitArchiver: false,
-			failIfNoResults: false
-		])
+
+		try {
+			bat 'powershell .\\Invoke-Continuous.ps1 Integration -ExitOnError'
+		} finally {
+ 			step([
+				$class: 'NUnitPublisher',
+				testResultsPattern: '.artifacts/Reports/**/*.NUnit.xml',
+				debug: false,
+				keepJUnitReports: false,
+				skipJUnitArchiver: false,
+				failIfNoResults: false
+			])
+		}
+
         stash includes: '.artifacts/Packages/**', name: 'packages'
     }
 }
