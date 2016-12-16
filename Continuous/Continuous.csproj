@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="tests\workspace\Continuous\Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\Invoke-Continuous.ps1">
@@ -53,9 +54,10 @@
     <Content Include="tests\Invoke-Continuous.Tests.ps1" />
     <Content Include="tests\feed\Fake.Module.1.0.0.nupkg" />
     <Content Include="tests\feed\Fake.Package.1.0.0.nupkg" />
+    <Content Include="tests\workspace\Continuous\Continuous.csproj" />
     <Content Include="tests\workspace\Continuous\packages.config" />
     <Content Include="tests\workspace\Continuous\Mock.action.ps1" />
-    <None Include="tests\workspace\.nuget\NuGet.Config.template" />
+    <None Include="tests\nuget\NuGet.Config.template" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Origami.PowerShell.Continuous.nuspec">
@@ -63,6 +65,7 @@
     </Content>
     <Content Include="packages.config" />
     <Content Include="content\Invoke-Continuous.ps1.txt" />
+    <Content Include="tests\workspace\Mock.sln" />
     <Content Include="tools\init.ps1" />
     <Content Include="tools\install.ps1" />
     <Content Include="tools\uninstall.ps1" />
