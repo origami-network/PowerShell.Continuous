@@ -56,8 +56,10 @@
     <Content Include="tests\feed\Fake.Package.1.0.0.nupkg" />
     <Content Include="tests\workspace\Continuous\Continuous.csproj" />
     <Content Include="tests\workspace\Continuous\packages.config" />
-    <Content Include="tests\workspace\Continuous\Mock.action.ps1" />
+    <Content Include="tests\workspace\Continuous\Inspection.action.ps1" />
     <None Include="tests\nuget\NuGet.Config.template" />
+    <Content Include="tests\workspace\Continuous\Nothing.action.ps1" />
+    <Content Include="tests\workspace\Continuous\Exception.action.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Origami.PowerShell.Continuous.nuspec">
