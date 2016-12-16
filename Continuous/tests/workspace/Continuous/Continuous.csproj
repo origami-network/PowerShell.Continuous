@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E96AE33B-7D40-4BD2-A0BD-28D5E1AA7C1E}</ProjectGuid>
+    <ProjectGuid>{10E9DE51-5083-4340-A53F-604F1749AEE3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Continous</RootNamespace>
-    <AssemblyName>Continous</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Continuous</RootNamespace>
+    <AssemblyName>Continuous</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -41,41 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="tests\workspace\Continuous\Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\Invoke-Continuous.ps1">
-      <Link>tools\Invoke-Continuous.ps1</Link>
-    </Content>
-    <None Include="..\Jenkinsfile">
-      <Link>Jenkinsfile</Link>
-    </None>
-    <Content Include="Integration.action.ps1" />
-    <Content Include="tests\Invoke-Continuous.Tests.ps1" />
-    <Content Include="tests\feed\Fake.Module.1.0.0.nupkg" />
-    <Content Include="tests\feed\Fake.Package.1.0.0.nupkg" />
-    <Content Include="tests\workspace\Continuous\Continuous.csproj" />
-    <Content Include="tests\workspace\Continuous\packages.config" />
-    <Content Include="tests\workspace\Continuous\Inspection.action.ps1" />
-    <None Include="tests\nuget\NuGet.Config.template" />
-    <Content Include="tests\workspace\Continuous\Nothing.action.ps1" />
-    <Content Include="tests\workspace\Continuous\Exception.action.ps1" />
+    <None Include="Mock.action.ps1" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Origami.PowerShell.Continuous.nuspec">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="packages.config" />
-    <Content Include="content\Invoke-Continuous.ps1.txt" />
-    <Content Include="tests\workspace\Mock.sln" />
-    <Content Include="tools\init.ps1" />
-    <Content Include="tools\install.ps1" />
-    <Content Include="tools\uninstall.ps1" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
