@@ -60,6 +60,7 @@
     <None Include="tests\nuget\NuGet.Config.template" />
     <Content Include="tests\workspace\Continuous\Nothing.action.ps1" />
     <Content Include="tests\workspace\Continuous\Exception.action.ps1" />
+    <Content Include="tests\workspace\Continuous\Inspection.Arguments.action.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Origami.PowerShell.Continuous.nuspec">
