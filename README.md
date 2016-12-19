@@ -14,7 +14,7 @@ The NuGet package is prepared for easy install and use in Visual Studio.
  2. Create new Class Library project with name `Continuous`.
  3. Install `Origami.PowerShell.Continuous` package using visual tool or Package Manager Console:
 	
-    ```
+    ```batch
 	PM> Install-Package -Id Origami.PowerShell.Continuous -ProjectName Continuous
 	```
   
@@ -23,7 +23,7 @@ The NuGet package is prepared for easy install and use in Visual Studio.
  6. Change current directory to Solution folder.
  7. Invoke continuous action:
 	
-    ```
+    ```batch
 	PS> ./Invoke-Continuous Example
 	```
 
