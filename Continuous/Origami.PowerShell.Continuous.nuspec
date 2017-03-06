@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Origami.PowerShell.Continuous</id>
-    <version>0.0.5</version>
+    <version>0.1.0-rc</version>
     <authors>Bartłomiej Dubas</authors>
     <owners>Bartłomiej Dubas</owners>
 
