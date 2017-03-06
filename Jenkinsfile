@@ -24,6 +24,7 @@ stage ("Integration") {
 			])
 		}
 
+        stash includes: '**.sln, Continuous/**', name: 'continuous'
         stash includes: '.artifacts/Packages/**', name: 'packages'
     }
 }
@@ -31,8 +32,11 @@ stage ("Integration") {
 stage ("Delivery") {
     input 'Publish on nuget.org?'
     node {
+        unstash 'continuous'
+        
+        unstash 'packages'
         withCredentials([[$class: 'StringBinding', credentialsId: 'nuget.org - push', variable: 'APIKEY']]) {
-			bat 'powershell .\\Invoke-Continuous.ps1 Delivery -NuGetApiKey ${env.APIKEY} -ExitOnError'            
+			bat "powershell .\\Invoke-Continuous.ps1 Delivery -NuGetApiKey ${env.APIKEY} -ExitOnError"        
         }
     }
 }
