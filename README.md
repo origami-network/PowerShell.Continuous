@@ -48,7 +48,8 @@ Optionally it Solution can contain:
 
 ### Action file
 
-One or many PowerShell script files. Placed in `Continuous` project folder with name _`<action name>`_`.action.ps1` where _action name_ will be used as the parameters of `Invoke-Continuous` call.
+One or many PowerShell script files. Placed in `Continuous` project folder with name _`<action name>`_`.action.ps1`,
+where _action name_ will be used as the parameters of `Invoke-Continuous` call.
 
 Each Action file is a standard script or cmdlet file, with or without parameters.
 
@@ -131,13 +132,25 @@ They will be populated to the action script if they will match by name.
 
 ### NuGet package with PowerShell module
 
-> TODO: describe how it works
+While there is lot of NuGet packages that in real are PowerShell modules,
+the script detect them end form them,
+so standard module loader can use them. 
+
+Packages that has `tools` directory with manifes in form of `psd1` file,
+are coppied to temporary modules directory (default `.modules` in workspace).
+The search path for modules is extended for the time of executing action.
+
+Such modules can be imported by the script using `Import-Module`,
+as well using [`#Requires`](https://msdn.microsoft.com/en-us/powershell/reference/4.0/microsoft.powershell.core/about/about_requires) construct.
+See Integration action in this project. 
 
 
 ### Continuous Integration/Deployment
 
-> TODO: describe how to use it
+By defining the set of Actions, `Invoke-Continuous` can be used to build continous pipelines.
+Reusing the script, Acions and `packages.config` duiring various stages will keep the process definition close to the solution code.
 
+Encapsulatig Modules into NuGet packages could help to organize and modularize continous process.  
 
 ## How it works
 
