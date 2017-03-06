@@ -1,6 +1,6 @@
 #!groovy
 
-stage ("Build") {
+stage ("Integration") {
     node {
         checkout([
            $class: 'GitSCM',
@@ -28,11 +28,11 @@ stage ("Build") {
     }
 }
 
-stage ("Release") {
+stage ("Delivery") {
     input 'Publish on nuget.org?'
     node {
-        withCredentials([[$class: 'StringBinding', credentialsId: 'secret', variable: 'TOKEN']]) {
-            bat 'echo %TOKEN%'
+        withCredentials([[$class: 'StringBinding', credentialsId: 'nuget.org - push', variable: 'APIKEY']]) {
+			bat 'powershell .\\Invoke-Continuous.ps1 Delivery -NuGetApiKey ${env.APIKEY} -ExitOnError'            
         }
     }
 }
