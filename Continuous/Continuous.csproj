@@ -57,6 +57,7 @@
     <Content Include="tests\workspace\Continuous\Continuous.csproj" />
     <Content Include="tests\workspace\Continuous\packages.config" />
     <Content Include="tests\workspace\Continuous\Inspection.action.ps1" />
+    <None Include="Delivery.action.ps1" />
     <None Include="tests\nuget\NuGet.Config.template" />
     <Content Include="tests\workspace\Continuous\Nothing.action.ps1" />
     <Content Include="tests\workspace\Continuous\Exception.action.ps1" />
