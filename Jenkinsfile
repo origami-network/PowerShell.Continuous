@@ -29,14 +29,16 @@ stage ("Integration") {
     }
 }
 
-stage ("Delivery") {
-    input 'Publish on nuget.org?'
-    node {
-        unstash 'continuous'
+if (${env.BRANCH_NAME} == 'master') {
+	stage ("Delivery") {
+		input 'Publish on nuget.org?'
+		node {
+			unstash 'continuous'
         
-        unstash 'packages'
-        withCredentials([[$class: 'StringBinding', credentialsId: 'nuget.org - push', variable: 'APIKEY']]) {
-			bat "powershell .\\Invoke-Continuous.ps1 Delivery -NuGetApiKey ${env.APIKEY} -ExitOnError"        
-        }
-    }
+			unstash 'packages'
+			withCredentials([[$class: 'StringBinding', credentialsId: 'nuget.org - push', variable: 'APIKEY']]) {
+				bat "powershell .\\Invoke-Continuous.ps1 Delivery -NuGetApiKey ${env.APIKEY} -ExitOnError"        
+			}
+		}
+	}
 }
